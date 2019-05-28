@@ -23,6 +23,7 @@ bin/mysqld_safe --user=mysql &
 
 cd bin/
 ./mysql -u root -p
+exit
 
 cd .. && cp support-files/mysql.server /etc/init.d/mysql.server
 SET PASSWORD FOR 'root'@'localhost'='password';
