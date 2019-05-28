@@ -5,7 +5,6 @@ cd /var/tmp
 wget https://dev.mysql.com/get/Downloads/MySQL-Cluster-7.5/mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64.tar.gz
 
 groupadd mysql
-# Ya debería de estar creado
 useradd -g mysql -s /bin/false mysql
 
 tar -C /usr/local -xzvf mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64.tar.gz
@@ -20,5 +19,6 @@ chgrp -R mysql .
 
 bin/mysql_ssl_rsa_setup
 bin/mysqld_safe --user=mysql &
+
 cd /usr/local/mysql/bin
 ./mysql -u root -p
