@@ -1,7 +1,6 @@
 apt -y update
 apt-get install libaio1 -y
 
-
 groupadd mysql
 useradd -r -g mysql -s /bin/false mysql
 
@@ -10,11 +9,12 @@ cd /usr/local
 wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.25-linux-glibc2.12-x86_64.tar.gz
 tar zxvf mysql-5.7.25-linux-glibc2.12-x86_64.tar.gz 
 ln -s mysql-5.7.25-linux-glibc2.12-x86_64 mysql
+
 cd mysql && mkdir mysql-files
 chown mysql:mysql mysql-files
-
 chmod 750 mysql-files
 
+/* Importante guardar la contraseña. */
 bin/mysqld --initialize --user=mysql
 
 bin/mysql_ssl_rsa_setup
@@ -26,4 +26,8 @@ cd bin/
 exit
 
 cd .. && cp support-files/mysql.server /etc/init.d/mysql.server
+
+cd bin/
+./mysql -u root -p
 SET PASSWORD FOR 'root'@'localhost'='password';
+exit
