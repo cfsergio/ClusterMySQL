@@ -1,3 +1,4 @@
+apt -y update
 apt -y install libaio1 libnuma1
 
 cd /var/tmp
