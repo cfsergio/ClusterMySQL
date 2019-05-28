@@ -1,5 +1,5 @@
 apt -y update
-apt-get install libaio1
+apt-get install libaio1 -y
 
 
 groupadd mysql
