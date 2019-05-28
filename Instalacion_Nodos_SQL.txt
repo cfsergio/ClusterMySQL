@@ -22,3 +22,5 @@ bin/mysqld_safe --user=mysql &
 
 cd /usr/local/mysql/bin
 ./mysql -u root -p
+SET PASSWORD FOR 'root'@'localhost'='password';
+exit
