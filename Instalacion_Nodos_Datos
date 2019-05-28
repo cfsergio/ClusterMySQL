@@ -1,0 +1,7 @@
+cd /usr/local/mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64
+
+cp bin/ndbd /usr/local/bin/ndbd
+cp bin/ndbmtd /usr/local/bin/ndbmtd
+
+cd /usr/local/bin
+chmod +x ndb*
