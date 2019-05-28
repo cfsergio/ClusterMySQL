@@ -1,12 +1,24 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
+#############################################################################
+#                         Vagrantfile NodoSQL                               #
+#############################################################################
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
-  config.vm.network "private_network", ip: "192.168.56.100"
+ 
+  # Hostname
   config.vm.hostname = "nodosql.asix.local"
+ 
+  # Host Only Network
+  config.vm.network "private_network", ip: "192.168.56.100"
+
+  # Hardware
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = "512"
+     vb.cpus = 4
+  end
+config.vm.hostname = "nodosql.asix.local"
 end
+#############################################################################
+#                         Vagrantfile NodoSQL                               #
+#############################################################################
+# Comando para encender la máquina. 
+vagrant up && vagrant ssh
