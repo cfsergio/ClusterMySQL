@@ -9,7 +9,7 @@ ndbcluster                      # run NDB storage engine
 
 [mysql_cluster]
 # Options for NDB Cluster processes:
-ndb-connectstring=192.168.56.200  # location of management server (IP MGM)
+ndb-connectstring=192.168.56.110  # location of management server (IP MGM)
 
 #############################################################################
 #                         Configuración SQLNode                             #
