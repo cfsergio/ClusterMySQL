@@ -1,4 +1,4 @@
-# A la hora de realizar el Cluster MySQL, habrá que instalar MySQL en todas las máquinas, menos en la que sea de MGM.
+# A la hora de realizar el Cluster MySQL, habrá que instalar MySQL en la máquina NodeSQL.
 
 apt -y update
 apt-get install libaio1 -y
