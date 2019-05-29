@@ -1,0 +1,16 @@
+# En el nodo MGM
+ndb_mgmd -f /var/lib/mysql-cluster/config.ini
+ndb_mgm
+
+# En cada nodo de datos
+ndbd
+
+# En el NodoSQL
+service mysql restart
+
+# En el nodo MGM
+ndb_mgm> show
+
+# Apagar el cluster de forma segura
+# En el nodo MGM
+ndb_mgm -e shutdown
