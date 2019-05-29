@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "nodosql.asix.local"
  
   # Host Only Network
-  config.vm.network "private_network", ip: "192.168.56.100"
+  config.vm.network "private_network", ip: "192.168.56.220"
 
   # Hardware
   config.vm.provider "virtualbox" do |vb|
@@ -22,3 +22,9 @@ end
 #############################################################################
 # Comando para encender la máquina. 
 vagrant up && vagrant ssh
+
+# El nodo SQL: Este es el nodo que accede a los datos del cluster. 
+# En el caso de MySQL Cluster, un nodo cliente es un servidor MySQL 
+# tradicional que usa el motor NDB Cluster . Un nodo SQL típicamente 
+# se arranca con el comando mysqld --ndbcluster o símplemente usando 
+# mysqld con ndbcluster añadido a my.cnf.
