@@ -1,3 +1,16 @@
+apt -y update
+apt -y install libaio1 libnuma1
+
+cd /var/tmp
+wget https://dev.mysql.com/get/Downloads/MySQL-Cluster-7.5/mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64.tar.gz
+
+groupadd mysql
+useradd -g mysql -s /bin/false mysql
+
+tar -C /usr/local -xzvf mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64.tar.gz
+ln -s /usr/local/mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64/ /usr/local/mysql
+
+cd /usr/local/mysql
 cd /usr/local/mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64
 
 cp bin/ndb_mgm* /usr/local/bin
