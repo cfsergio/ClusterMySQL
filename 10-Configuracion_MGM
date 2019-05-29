@@ -30,25 +30,25 @@ ServerPort=2202   # This the default value; however, you can use any
 
 [ndb_mgmd]
 # Management process options:
-HostName=192.168.56.200         # Hostname or IP address of MGM node
+HostName=192.168.56.110         # Hostname or IP address of MGM node
 DataDir=/var/lib/mysql-cluster  # Directory for MGM node log files
 
 [ndbd]
 # Options for data node "A":
                                 # (one [ndbd] section per data node)
-HostName=192.168.56.101         # Hostname or IP address
+HostName=192.168.56.100         # Hostname or IP address
 NodeId=2                        # Node ID for this data node
 DataDir=/usr/local/mysql/data   # Directory for this data node's data files
 
 [ndbd]
 # Options for data node "B":
-HostName=192.168.56.102          # Hostname or IP address
+HostName=192.168.56.101          # Hostname or IP address
 NodeId=3                        # Node ID for this data node
 DataDir=/usr/local/mysql/data   # Directory for this data node's data files
 
 [mysqld]
 # SQL node options:
-HostName=192.168.56.100
+HostName=192.168.56.220
  
 #############################################################################
 #                           Configuración MGM                               #
