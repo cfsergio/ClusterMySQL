@@ -1,4 +1,3 @@
-# Nodo control es equivalente al NodoSQL
 cd /usr/local/mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64
 
 cp bin/ndb_mgm* /usr/local/bin
