@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
      vb.memory = "512"
      vb.cpus = 4
-  config.vm.synced_folder "V:/TheNewEra", "/home/vagrant/data"
+  config.vm.synced_folder "V:/TheNewEra", "/var/tmp/"
   end
 config.vm.hostname = "nodosql.asix.local"
 end
