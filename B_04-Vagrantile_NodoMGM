@@ -1,0 +1,32 @@
+#############################################################################
+#                         Vagrantfile NodoMGM                              #
+#############################################################################
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian/jessie64"
+ 
+  # Hostname
+  config.vm.hostname = "nodomgm.asix.local"
+ 
+  # Host Only Network
+  config.vm.network "private_network", ip: "192.168.56.10"
+
+  # Hardware
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = "512"
+     vb.cpus = 4
+  end
+config.vm.hostname = "nodomgm.asix.local"
+end
+#############################################################################
+#                         Vagrantfile NodoMGM                              #
+#############################################################################
+
+# Comando para encender la máquina. 
+vagrant up && vagrant ssh
+
+# El nodo de administración (MGM) : El rol de este tipo de nodo es administrar 
+# los otros nodos dentro del MySQL Cluster, tal como proporcionar datos de 
+# configuración, iniciar y parar nodos, ejecutar copias de seguridad, y así. 
+# Como este tipo de nodo administra la configuración de otros nodos, un nodo 
+# de este tipo debe arrancarse primero, antes de cualquier otro nodo. Un nodo 
+# MGM se arranca con el comando ndb_mgmd.
