@@ -1,0 +1,13 @@
+/* NodoSQL machine */
+apt -y install git
+git clone git://github.com/cfsergio/ClusterMySQL
+
+cd /usr/local/mysql
+bin/mysql -u root -p < ~/ClusterMySQL/world.sql
+bin/mysql -u root -p 
+
+show databases;
+USE world;
+SELECT * FROM city LIMIT 5;
+
+
