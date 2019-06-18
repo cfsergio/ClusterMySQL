@@ -10,6 +10,8 @@ useradd -g mysql -s /bin/false mysql
 tar -C /usr/local -xzvf mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64.tar.gz
 ln -s /usr/local/mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64/ /usr/local/mysql
 
+mkdir -p /usr/local/mysql/data
+
 cd /usr/local/mysql
 cd /usr/local/mysql-cluster-gpl-7.5.14-linux-glibc2.12-x86_64
 
