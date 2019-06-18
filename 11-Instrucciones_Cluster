@@ -2,13 +2,19 @@
 ndb_mgmd -f /var/lib/mysql-cluster/config.ini
 ndb_mgm
 
+# En el nodo MGM
+# Observamos que no hay nada conectado
+ndb_mgm> show
+
 # En cada nodo de datos
 ndbd
 
 # En el NodoSQL
-service mysql restart
+cd /usr/local/mysql
+bin/mysqld_safe --user=mysql &
 
 # En el nodo MGM
+# Observamos que están conectados los nodos
 ndb_mgm> show
 
 # Apagar el cluster de forma segura
