@@ -10,4 +10,6 @@ show databases;
 USE world;
 SELECT * FROM city LIMIT 5;
 
+SHOW ENGINE NDB STATUS \G
+
 
