@@ -20,3 +20,9 @@ ndb_mgm> show
 # Apagar el cluster de forma segura
 # En el nodo MGM
 ndb_mgm -e shutdown
+
+##################################################
+#           Crear copia de seguridad             #
+##################################################
+
+ndb_mgm -e "START BACKUP"
